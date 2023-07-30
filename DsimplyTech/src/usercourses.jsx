@@ -28,7 +28,7 @@ function Usercourses() {
 
   if (purchasedCourses.length === 0){
     return <div style={{display: "flex", flexWrap: "wrap", justifyContent: "center"}}>
-      <h3>You are not enrollled in any course. What are you waiting for... Go and enroll yourself...</h3>
+      <h3>You are not enrolled in any courses. What are you waiting for? Go and enroll yourself.</h3>
       </div>
   } else {
     return <div style={{display: "flex", flexWrap: "wrap", justifyContent: "center"}}>
