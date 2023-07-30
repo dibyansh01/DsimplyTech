@@ -14,7 +14,7 @@
 2. [User Dashboard](#user-dashboard)
 3. [Built With](#built-with)
 4. [Getting Started](#getting-started)
-5. [Contributing](#contributing)
+5. [Contribution](#contribution)
 6. [License](#license)
 
 ## Admin Dashboard
@@ -64,10 +64,9 @@ Node.js and npm should be installed on your machine.
    ```
 3. Create .env file inside 'server' folder and add your MongoDB database cloud URL as- MONGODB= "your_mongodb_cloud_url"
    ```sh
-   MONGODB = mongodb+srv://<name:password>@cluster0.grnusxo.mongodb.net
-   SECRET = "Random String";
+   MONGODB = "mongodb+srv://<name:password>@cluster0.grnusxo.mongodb.net"
    ```
-4.  Start the backend server by running following command inside DsimplyTech/server directory.
+4.  Start the backend server by running the following command inside the DsimplyTech/server directory.
    ```sh
    node index.js
    ```
@@ -76,7 +75,25 @@ Node.js and npm should be installed on your machine.
     ```sh
    cd DsimplyTech
    ```
-2. Install the required npm packages inside DsimplyTech directory for frontend.
+2. Install the required npm packages inside the DsimplyTech directory for the frontend.
+   ```sh
+   npm install
+   ```
+3. Start the frontend by running the following command inside the DsimplyTech directory.
+    ```sh
+   npm run dev
+   ```
+    
+# Contribution
+
+I welcome contributions to the DsimplyTech project. If you find any issues or have suggestions for improvements, please create a pull request. Make sure to follow the contribution guidelines in the repository. There is still a lot of room for improvement in this project, such as the addition of a payment gateway, the beautification of the course modules, and many more.
+
+
+
+
+# License
+
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
 
 
 
