@@ -31,17 +31,17 @@ function About() {
               </Box>
               <Grid container spacing={3} alignItems="center" justifyContent="center">
                 <Grid item xs={12} sm={4}>
-                  <Typography variant="h5" align="center" gutterBottom>
+                   <Typography variant="h5" align="center" gutterBottom>
                     Course Sample 1
-                  </Typography>
-                  <Card sx={{ maxWidth: 400 }}>
+                   </Typography>
+                   <Card sx={{ maxWidth: 400 }}>
                     <CardMedia
                       component="img"
                       height="200"
                       image="https://www.analyticsinsight.net/wp-content/uploads/2022/03/Python-Remains-at-the-Top-Despite-the-Intro-of-New-Coding-Langs.jpg"
                       alt="Course 1"
                     />
-                  </Card>
+                   </Card>
                 </Grid>
                 <Grid item xs={12} sm={4}>
                   <Typography variant="h5" align="center" gutterBottom>
@@ -137,8 +137,7 @@ function About() {
               </Grid>
             </Container>
           );
-    }
-    
+    } 
 };
 
 

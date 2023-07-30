@@ -19,17 +19,12 @@ import {
 import axios from "axios";
 import {useEffect} from "react";
 
-
-
 function App() {
     return (
         <RecoilRoot>
             <div style={{width:'100vw', height: '100%', backgroundColor:'#b3e5ec'}}>
                 {/* here RecoilRoot is for the state management  */}
-                
-                
                     <Router>
-                
                     <MyAppBar/>
                     <InitUser />
                         <Routes>
@@ -45,7 +40,6 @@ function App() {
                         </Routes>
                         <StickyFooter/>
                     </Router>
-            
             </div>
         </RecoilRoot>
     );

@@ -42,7 +42,6 @@ function Course(){
             Loading....
         </div>
     }
-
     return <div>
         <GrayTopper />
         <Grid container>
@@ -54,7 +53,6 @@ function Course(){
             </Grid>
         </Grid>
     </div>
-
 }
 
 function GrayTopper() {
@@ -91,7 +89,6 @@ function UpdateCard() {
                 label="Title"
                 variant="outlined"
             />
-
             <TextField
                 value={description}
                 style={{marginBottom: 10}}
@@ -102,7 +99,6 @@ function UpdateCard() {
                 label="Description"
                 variant="outlined"
             />
-
             <TextField
                 value={image}
                 style={{marginBottom: 10}}
@@ -123,7 +119,6 @@ function UpdateCard() {
                 label="Price"
                 variant="outlined"
             />
-
             <Button
                 variant="contained"
                 onClick={async () => {
@@ -181,7 +176,5 @@ function CourseCard() {
     </Card>
     </div>
 }
-
-
 
 export default Course

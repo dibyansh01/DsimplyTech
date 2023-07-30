@@ -12,11 +12,9 @@ const HomePage = () => {
     const white = '#fefdff'
     const Role = useRecoilValue(roleState);
    
-
   if (userEmail && Role.role === 'admin'){
     console.log(Role.role)
     return (
-      
       <div
         style={{
           backgroundImage: `url(${backgroundImageUrl})`,
@@ -77,7 +75,6 @@ const HomePage = () => {
     );
   } 
 
-
   if (!userEmail){
     return (
       <div
@@ -107,11 +104,6 @@ const HomePage = () => {
       </div>
     );
   }
-
- 
-
-
- 
 };
 
 export default HomePage;

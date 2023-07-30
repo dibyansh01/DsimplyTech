@@ -7,9 +7,6 @@ import {useNavigate} from "react-router-dom";
 function Usercourses() {
     const [purchasedCourses, setpurchasedCourses] = useState([]);
     const red = '#d80000';
-    
-
-    
     useEffect(() => {
         async function fetchData() {
             const response = await fetch('http://localhost:3000/user/purchasedCourses', {
@@ -76,9 +73,7 @@ function Usercourses() {
     </div>
     </Card>
       }
-  }
+  } 
+}
 
-  
-   
-    }
 export default Usercourses;

@@ -12,7 +12,6 @@ import {useSetRecoilState} from "recoil";
 import {userState} from "./store/atoms/user.js";
 import { roleState } from './store/atoms/role.js';
 
-
 function Signup() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")

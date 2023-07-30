@@ -1,20 +1,13 @@
 import { Button, Card, Typography } from "@mui/material";
-import Box from '@mui/material/Box';
 import { useEffect, useState } from "react";
-import axios from "axios";
 import { roleState } from "./store/atoms/role";
 import {useNavigate} from "react-router-dom";
-import { isUserLoading } from "./store/selectors/isUserLoading";
-import {useSetRecoilState, useRecoilValue} from "recoil";
-import { userState } from "./store/atoms/user.js";
+import { useRecoilValue} from "recoil";
 import { userEmailState } from "./store/selectors/userEmail"
 
 function Courses() {
     const [courses, setCourses] = useState([]);
-    const navigate = useNavigate();
-    const userLoading = useRecoilValue(isUserLoading);
     const userEmail = useRecoilValue(userEmailState);
-    const setUser = useSetRecoilState(userState);
     const Role = useRecoilValue(roleState);
 
     if(userEmail && Role.role === 'admin') {
@@ -41,8 +34,7 @@ function Courses() {
         )}
     </div>
     
-
- function Course(props) {
+    function Course(props) {
     const navigate = useNavigate()
 
     return <Card
@@ -85,7 +77,6 @@ function Courses() {
                             'content-type': 'application/json',
                             'Authorization': 'Bearer ' + localStorage.getItem('token')
                         },
-                       
                     })
                     const data = await response.json();
                     const remainingCourses = data.remainingCourses
@@ -127,7 +118,7 @@ function Courses() {
     </div>
     
 
- function Course(props) {
+    function Course(props) {
     const navigate = useNavigate()
 
     return <Card
@@ -179,7 +170,5 @@ function Courses() {
     }
   }
 }
-
-
 
 export default Courses;

@@ -1,8 +1,7 @@
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
-import {Card, Typography} from '@mui/material';
+import {Card} from '@mui/material';
 import {useState} from 'react'; 
-
 
 function AddCourse(){
     const[title, setTitle] = useState("") 
@@ -73,5 +72,4 @@ function AddCourse(){
             </Card>
     </div>
 }
-
 export default AddCourse
