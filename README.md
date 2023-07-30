@@ -11,10 +11,11 @@
 # Table of Contents
 
 1. [Admin Dashboard](#admin-dashboard)
-2. [Built With](#built-with)
-3. [Getting Started](#getting-started)
-4. [Contribution](#contribution)
-5. [License](#license)
+2. [User Dashboard](#user-dashboard)
+3. [Built With](#built-with)
+4. [Getting Started](#getting-started)
+5. [Contribution](#contribution)
+6. [License](#license)
 
 ## Admin Dashboard
 
