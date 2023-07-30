@@ -11,13 +11,13 @@
 # Table of Contents
 
 1. [Admin Dashboard](#admin-dashboard)
-2. [User Dashboard](#user-dashboard)
-3. [Built With](#built-with)
-4. [Getting Started](#getting-started)
-5. [Contribution](#contribution)
-6. [License](#license)
+2. [Built With](#built-with)
+3. [Getting Started](#getting-started)
+4. [Contribution](#contribution)
+5. [License](#license)
 
 ## Admin Dashboard
+
 1. Admin side of the DsimplyTech app.
 2. Admin can login or sign up.
 3. Admin can create, edit and delete any course:
