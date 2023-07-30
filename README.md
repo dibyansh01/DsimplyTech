@@ -39,7 +39,7 @@ Note: Implementation of the payment gateway and course content is the remaining 
 
 ## Getting Started
 
-To get a local copy up and running, please follow the simple steps. 
+To run the app locally, please follow the following simple steps:
 
 ## Prerequisites
 
@@ -53,16 +53,12 @@ Node.js and npm should be installed on your machine.
    git clone <your-repository-url>
    ```
 
-### Server Setup 
-1. Change directory to the root of the cloned repository
+### Backend Server Setup
+1. Change the directory to the server folder inside the cloned repository.
    ```sh
-   cd DsimplyTech
+   cd DsimplyTech/server
    ```
-2. Change directory to the server folder
-   ```sh
-   cd server
-   ```
-3. Install the required npm packages inside DsimplyTech and DsimplyTech/Server directory seperately.
+2. Install the required npm packages inside the DsimplyTech/server directory for the backend.
    ```sh
    npm install
    ```
@@ -71,10 +67,16 @@ Node.js and npm should be installed on your machine.
    MONGODB = mongodb+srv://<name:password>@cluster0.grnusxo.mongodb.net
    SECRET = "Random String";
    ```
-4. Start the server
+4.  Start the backend server by running following command inside DsimplyTech/server directory.
    ```sh
-   
+   node index.js
    ```
+### Frontend Setup
+1. Change the directory to the cloned repository folder 'DsimplyTech'
+    ```sh
+   cd DsimplyTech
+   ```
+2. Install the required npm packages inside DsimplyTech directory for frontend.
 
 
 
