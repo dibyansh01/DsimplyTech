@@ -97,12 +97,12 @@ function Signup() {
                                 role: role
                             })
 
-                            alert("Signed Up")
+                            alert(data.message)
                             navigate('/');
                         } catch (error) {
                             // Handle error if the request fails
-                            console.error(error);
-                            alert('Error: Incorrect Email/Password/Role')
+                            console.log(error);
+                            alert(error.response.data.message)
                         }
                     }}
                     
