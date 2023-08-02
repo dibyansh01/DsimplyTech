@@ -4,6 +4,10 @@ const { User, Course, Admin} = require('../db');
 const jwt = require('jsonwebtoken')
 const {SECRET} = require('../middleware/auth')
 const { authenticateJwt } = require('../middleware/auth')
+const { z } = require('zod');
+const usernameSchema = z.string().min(3).max(50);
+const passwordSchema = z.string().min(6).max(50);
+
 
 const router = express.Router();
 
@@ -17,22 +21,45 @@ router.get('/me', authenticateJwt, async (req, res)=>{
     })
 })
 
-router.post('/signup', (req, res) => {
+router.post('/signup', async (req, res) => {
+  try {
     const { username, password } = req.body;
-    function callback(admin) {
-      if (admin) {
-        res.status(403).json({ message: 'Admin already exists' });
-      } else {
-        const obj = { username: username, password: password };
-        const newAdmin = new Admin(obj);
-        newAdmin.save();
-        const token = jwt.sign({ username, role: 'admin' }, SECRET, { expiresIn: '1h' });
-        res.json({ message: 'Admin created successfully', token });
-      }
-  
+
+    // Validate input data using Zod
+    usernameSchema.parse(username);
+    passwordSchema.parse(password);
+
+    const admin = await Admin.findOne({ username });
+    if (admin) {
+      res.status(403).json({ message: 'Admin already exists' });
+    } else {
+      const newAdmin = new Admin({ username, password });
+      await newAdmin.save();
+      const token = jwt.sign({ username, role: 'admin' }, SECRET, { expiresIn: '1h' });
+      res.json({ message: 'Admin created successfully', token });
     }
-    Admin.findOne({ username }).then(callback);
-  });
+  } catch (error) {
+    // Zod validation error
+    res.status(400).json({ message: 'Invalid input data', errors: error.errors });
+  }
+});
+
+// router.post('/signup', (req, res) => {
+//     const { username, password } = req.body;
+//     function callback(admin) {
+//       if (admin) {
+//         res.status(403).json({ message: 'Admin already exists' });
+//       } else {
+//         const obj = { username: username, password: password };
+//         const newAdmin = new Admin(obj);
+//         newAdmin.save();
+//         const token = jwt.sign({ username, role: 'admin' }, SECRET, { expiresIn: '1h' });
+//         res.json({ message: 'Admin created successfully', token });
+//       }
+  
+//     }
+//     Admin.findOne({ username }).then(callback);
+//   });
  
 router.post('/login', async (req, res) => {
     const { username, password } = req.headers;
