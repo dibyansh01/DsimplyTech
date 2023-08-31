@@ -108,13 +108,12 @@ function Signin(){
                             })
                             //console.log(data);
                             //console.log(role)
-                            alert("Signed In")
-                            
-                            navigate('/')
+                            alert(data.message)
+                            navigate('/');
                         } catch (error) {
                             // Handle error if the request fails
-                            console.error(error);
-                            alert('Error: Incorrect Email/Password/Role')
+                            console.log(error);
+                            alert(error)
                         }
                     }}
                 > Signin</Button>
